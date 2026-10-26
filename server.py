@@ -4,7 +4,7 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 class SlowHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         # Имитируем тяжелый расчет или зависшую базу данных
-        time.sleep(5)
+        #time.sleep(5)
         self.send_response(200)
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
