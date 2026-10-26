@@ -10,4 +10,7 @@ services:
 
   api_backend:
     image: python:3.11-alpine
-    command: python -m http.server 8000
+    volumes:
+      - ./server.py:/app/server.py:ro
+    working_dir: /app
+    command: python server.py
